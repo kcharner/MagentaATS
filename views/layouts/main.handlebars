@@ -7,10 +7,73 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	</head>
-	<body>
+<body>
 	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   	ADD NEW APPLICANT
 	</button>
-		{{{ body }}}
-	</body>
+
+		<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		
+<!-- 		<header>
+    	<h3>New Applicant</h1>
+		</header> -->
+		  <div class="modal-dialog">
+
+		  <!-- Modal Content -->
+		    <div class="modal-content">
+
+		    	<!-- Modal Header -->
+		      <!-- The .modal-header class is used to define the style for the header of the modal  -->
+		      <div class="modal-header">
+		      <!-- The <button> inside the header has a data-dismiss="modal" attribute which closes the modal if you click on it -->
+		      <!-- The .close class styles the close button, and the .modal-title class styles the header with a proper line-height -->
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">New Applicant</h4>
+		      </div>
+
+		      <!-- The .modal-body class is used to define the style for the body of the modal. Add any HTML markup here; paragraphs, images, videos, etc. -->
+		      <div class="modal-body">
+
+		      <!-- New Applicant Form -->
+		        <form action="" method="post" role="form">
+		          <div class="form-group">
+		            <label for="lastName">Last Name</label>
+		            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Enter Last Name" required/>
+		          </div>
+		          <div class="form-group">
+		            <label for="firstName">First Name</label>
+		            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="Enter First Name" required/>
+		          </div>
+		          <div class="form-group">
+		            <label for="contract">Contract</label>
+		            <input type="text" name="contract" class="form-control" id="contract" placeholder="Contract ID/Name" required/>
+		          </div>
+		          <div class="form-group">
+		            <label for="position">Position</label>
+		            <input type="text" class="form-control" name="position" id="position" placeholder="Enter Position" required/>
+		          </div>
+		          <div class="form-group">
+		            <label for="birthDate">DOB</label>
+		            <input type="text" name="birthdDate" class="form-control" id="birthDate" placeholder="Enter DOB" required/>
+		          </div>
+		          <div class="form-group">
+		            <label for="firstName">License # <i>(if applicable)</i></label>
+		            <input type="text" name="license" class="form-control" id="license" placeholder="License #"/>
+		          </div>
+		          <div class="form-group">
+		          	<input type="submit" class="btn btn-primary" value="Add New Applicant">
+		          </div>
+		        </form>      	
+		      </div> <!-- End of Modal Body -->
+
+		      <!-- The .modal-footer class is used to define the style for the footer of the modal. Note that this area is right aligned by default. -->
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		      </div>
+		    </div> <!-- End of Modal Content -->
+		  </div> 
+		</div> <!-- End of Modal -->
+
+		
+</body>
 </html>
