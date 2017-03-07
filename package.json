@@ -1,0 +1,19 @@
+{
+  "name": "magenta_ats",
+  "version": "1.0.0",
+  "description": "job-applicant tracking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcharner/MagentaATS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcharner/MagentaATS/issues"
+  },
+  "homepage": "https://github.com/kcharner/MagentaATS#readme"
+}
