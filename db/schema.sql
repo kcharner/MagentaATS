@@ -1,6 +1,6 @@
 
-CREATE DATABASE ats_db;
-USE ats_db;
+CREATE DATABASE magenta_db;
+USE magenta_db;
 
 
 -- TABLE 1 - APPLICANTS TABLE
