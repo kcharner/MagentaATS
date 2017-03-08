@@ -1,0 +1,24 @@
+{
+  "development": {
+    "port": 3306,
+    "dialect": "mysql",
+    "host": "localhost",
+    "username": "root",
+    "password": "root",
+    "database": "magenta_db"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "magenta_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "magenta_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
