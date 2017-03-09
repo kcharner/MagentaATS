@@ -2,6 +2,7 @@
 CREATE DATABASE magenta_db;
 USE magenta_db;
 
+-- DATE MUST BE IN THIS FORMAT: YYYY-MM-DD
 
 -- TABLE 1 - APPLICANTS TABLE
 CREATE TABLE applicants
@@ -12,11 +13,15 @@ CREATE TABLE applicants
 	home_phone int(10) NOT NULL,
 	cell_phone int(10) NOT NULL,
 	email varchar(255) NOT NULL,
-	contract varchar(255) NOT NULL,
-	position varchar(255) NOT NULL,
-	license varchar(255),
-	SORA_license varchar(255),
-	PRIMARY KEY (id)
+	contract_id varchar(255) NOT NULL,
+	position_id varchar(255) NOT NULL,
+	driver_license varchar(20),
+	driver_exp DATE,
+	sora_license varchar(50),
+	sora_exp DATE,
+	PRIMARY KEY (id),
+	FOREIGN KEY (contract_id) references contracts(id),
+	FOREIGN KEY (position_id) references positions(id)
 );
 
 -- TABLE 2 - CONTRACTS TABLE
@@ -52,18 +57,19 @@ CREATE TABLE application_process
 (
 	id int NOT NULL AUTO_INCREMENT,
 	applicant_id int NOT NULL, 
-	applied varchar(255) NOT NULL,
-	fingerprint_appointment varchar(255),
-	fingerprint_background_approval varchar(255),
+	applied DATE NOT NULL,
+	fp_appt DATE,
+	fp_background_approval DATE,
 	orange_tag boolean,
-	sida_class boolean,
-	orientation_training varchar(255),
-	safety_training varchar(255),
-	customer_training varchar(255),
-	recieve_id varchar(255),
-	id_front varchar(255),
-	id_back varchar(255),
-	id_exp varchar(255),
+	sida_class DATE,
+	side_result boolean,
+	orientation_training DATE,
+	safety_training DATE,
+	customer_training DATE,
+	receive_id boolean,
+	id_front int(10),
+	id_back int(10),
+	id_exp DATE,
 	PRIMARY KEY (id),
 	FOREIGN KEY (applicant_id) references applicants(id)
 );
@@ -76,17 +82,12 @@ CREATE TABLE users
 	last_name varchar(255) NOT NULL,
 	email varchar(255) NOT NULL,
 	password varchar(255) NOT NULL,
-	level varchar(255) NOT NULL
+	level varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
 
 
-
-
-
-
-
--- table 1 - applicants 
+-- table 1 - applicants
 -- table 2 - contracts (name, business unit)
 -- table 3 - positions (name)
 -- table 4 - the joined table (applicants - contracts - position)
